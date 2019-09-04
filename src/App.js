@@ -4,9 +4,9 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
         return ( 

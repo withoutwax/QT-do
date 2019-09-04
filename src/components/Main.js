@@ -41,10 +41,13 @@ class Main extends React.Component {
     }
 
     render() {
-        console.log(this.state.dates);
+        console.log('Main.js', this.state.dates);
+
+        // Render the chart after the data is received by the API
+        const chart = this.state.dates.length > 0 ? <Chart apiState={this.state}/> : <div>Loading...</div>;
         return(
             <main>
-                <Chart />
+                { chart }
             </main>
         );
     }
