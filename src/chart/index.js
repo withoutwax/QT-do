@@ -21,7 +21,7 @@ function chart(data) {
         let ctx = canvas.getContext('2d');
 
         let day;
-        let yearStartDay = Number(moment().dayOfYear(1).format('d'));
+        let yearStartDay = Number(moment().dayOfYear(1).format('d')) + 1;
         let week;
         let canvas_index = 1; // Finding the xth day of the year for canvas
         let today = moment();
