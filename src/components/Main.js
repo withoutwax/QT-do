@@ -2,7 +2,7 @@ import React from 'react';
 import config from '../config';
 import { load } from '../spreadsheet';
 
-import Chart from './Chart';
+import ChartList from './ChartList';
 
 class Main extends React.Component {
     constructor(props) {
@@ -43,11 +43,11 @@ class Main extends React.Component {
     render() {
         console.log('Main.js', this.state.dates);
 
-        // Render the chart after the data is received by the API
-        const chart = this.state.dates.length > 0 ? <Chart apiState={this.state}/> : <div>Loading...</div>;
+        // Render the chartList after the data is received by the API
+        const chartList = this.state.dates.length > 0 ? <ChartList apiState={this.state}/> : <div>Loading...</div>;
         return(
             <main>
-                { chart }
+                { chartList }
             </main>
         );
     }
