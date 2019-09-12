@@ -13,6 +13,7 @@ const CANVAS_HEIGHT = 10*20;
 const BOX_COLOR = themes.standard.level0;
 const BOX_NOT_VALID_YET = themes.standard.levelnull;
 const THEME_01 = themes.standard.level1;
+const THEME_02 = themes.standard.level2;
 const OFFSET_X = 20;
 const OFFSET_Y = 50;
 
@@ -44,6 +45,20 @@ function chart(data, chartElement) {
         // TEXT: Title
         ctx.font = "normal 24px Heebo";
         ctx.fillText(data[0], 0, 24);
+
+        // Legend
+        ctx.fillStyle = THEME_02;
+        ctx.fillRect(33, 165, BOX_WIDTH, BOX_WIDTH);
+        ctx.fillStyle = '#000000';
+        ctx.font = "normal 12px Heebo";
+        ctx.fillText(" = Today", 47, 175);
+
+        ctx.fillStyle = THEME_01;
+        ctx.fillRect(110, 165, BOX_WIDTH, BOX_WIDTH);
+        ctx.fillStyle = '#000000';
+        ctx.font = "normal 12px Heebo";
+        ctx.fillText(" = Done", 124, 175);
+
 
         // Display Today's Date
         ctx.font = "normal 18px Heebo";
@@ -81,7 +96,7 @@ function chart(data, chartElement) {
                     dateIndex += 1;
                 } else if (calculateDays([today], 0) === canvas_index) {
                     // console.log("today!");
-                    ctx.fillStyle = '#32a852';
+                    ctx.fillStyle = THEME_02;
                 } else if (calculateDays([today], 0) < canvas_index) {
                     ctx.fillStyle = BOX_NOT_VALID_YET;
                 } else {
