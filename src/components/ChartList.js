@@ -10,11 +10,6 @@ class ChartList extends React.Component {
             dates: this.props.apiState.dates,
         }
     }
-    // componentDidMount = () => {
-    //     // console.log(this.props.apiState.dates);
-
-    //     // initChart(this.state.dates[0], '.chart0');
-    // }
 
     render() {
         console.log('render');
@@ -24,9 +19,7 @@ class ChartList extends React.Component {
                 chartNumber: index
             }
             return <Chart key={index} {...props} />
-            // return <canvas key={index} className={`chart${index}`}>Chart</canvas>;
         });
-        // initChart(this.state.dates[0], ".chart0");
 
         return(
             <div className="chart-container">

@@ -11,6 +11,7 @@ const BOX_HEIGHT = 10;
 const CANVAS_WIDTH = 10*80;
 const CANVAS_HEIGHT = 10*20;
 const BOX_COLOR = themes.standard.level0;
+const BOX_NOT_VALID_YET = themes.standard.levelnull;
 const THEME_01 = themes.standard.level1;
 const OFFSET_X = 20;
 const OFFSET_Y = 50;
@@ -45,6 +46,13 @@ function chart(data, chartElement) {
         ctx.fillText(data[0], 0, 24);
 
         for (week = 1; week <= 53; week++) {
+
+            // Display Months
+            ctx.fillStyle = '#000000';
+            ctx.font = "normal 10px Heebo";
+            let months = weekNumberToMonths(week); 
+            ctx.fillText(months, (OFFSET_X+(week*(BOX_WIDTH + 3))), OFFSET_Y);
+
             for (day = 1; day <= 7; day++) {
 
                 // Setting the start date (eg - Mon, Tues etc)
@@ -64,7 +72,7 @@ function chart(data, chartElement) {
                     // console.log("today!");
                     ctx.fillStyle = '#32a852';
                 } else if (calculateDays([today], 0) < canvas_index) {
-                    ctx.fillStyle = '#fcba03';
+                    ctx.fillStyle = BOX_NOT_VALID_YET;
                 } else {
                     // console.log("canvas_index", canvas_index);
                     ctx.fillStyle = BOX_COLOR;
@@ -99,4 +107,36 @@ function calculateDays(date, i) {
     let numDays = currentDate.diff(yearStart, 'days');
     return numDays;
     
+}
+
+function weekNumberToMonths(week) {
+    switch(week) {
+        case 1:
+            return "Jan";
+        case 5:
+            return "Feb";
+        case 9:
+            return "Mar";
+        case 14:
+            return "Apr";
+        case 18:
+            return "May";
+        case 22:
+            return "Jun";
+        case 27:
+            return "Jul";
+        case 31:
+            return "Aug";
+        case 36:
+            return "Sep";
+        case 40:
+            return "Oct";
+        case 44:
+            return "Nov";
+        case 49:
+            return "Dec";
+        default:
+            return "";
+
+    }
 }

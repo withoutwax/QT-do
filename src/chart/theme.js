@@ -3,6 +3,7 @@ export const themes = {
         background: "#ffffff",
         text: "#000000",
         meta: "#666666",
+        levelnull: "#f5f9ff",
         level0: "#ebedf0",
         level1: "#c6e48b",
         level2: "#7bc96f",
