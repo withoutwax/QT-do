@@ -8,7 +8,7 @@ export function initChart(data, chartElement) {
 
 const BOX_WIDTH = 10;
 const BOX_HEIGHT = 10;
-const CANVAS_WIDTH = 10*80;
+const CANVAS_WIDTH = 10*90;
 const CANVAS_HEIGHT = 10*20;
 const BOX_COLOR = themes.standard.level0;
 const BOX_NOT_VALID_YET = themes.standard.levelnull;
@@ -45,6 +45,18 @@ function chart(data, chartElement) {
         ctx.font = "normal 24px Heebo";
         ctx.fillText(data[0], 0, 24);
 
+        // Display Today's Date
+        ctx.font = "normal 18px Heebo";
+        ctx.fillText("Today's Date: ", 750, OFFSET_Y);
+        ctx.font = "normal 12px Heebo";
+        ctx.fillText(today.format('ll'), 750, OFFSET_Y+20);
+
+        // Display Number of Successes
+        ctx.font = "normal 18px Heebo";
+        ctx.fillText("Total: ", 750, OFFSET_Y+75);
+        ctx.font = "normal 12px Heebo";
+        ctx.fillText((data.length - 1) + " Days", 750, OFFSET_Y+95);
+
         for (week = 1; week <= 53; week++) {
 
             // Display Months
@@ -60,7 +72,6 @@ function chart(data, chartElement) {
                     day += yearStartDay;
                 }
                 // console.log(typeof day);
-
                 
                 // ctx.fillRect((week*(BOX_WIDTH + 3)), (day*(BOX_HEIGHT + 3)), BOX_WIDTH, BOX_WIDTH);
 
@@ -137,6 +148,14 @@ function weekNumberToMonths(week) {
             return "Dec";
         default:
             return "";
-
     }
 }
+
+// NEW IDEA for a HTML5 Canvas Library
+// function CanvasText(ctx, text, textSize, textStyle = "normal", color, typeFace, posX, posY) {
+//     let font = "'" + textStyle + ' ' + textSize + ' ' + typeFace + "'";
+
+//     if (color) { ctx.fillStyle = color; }
+//     ctx.font = font;
+//     ctx.fillText(text, posX, posY);
+// }
