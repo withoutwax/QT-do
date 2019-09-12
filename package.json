@@ -1,6 +1,6 @@
 {
   "name": "habit-tracker",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://withoutwax.github.io/Habit-Tracker/",
   "private": true,
   "dependencies": {
