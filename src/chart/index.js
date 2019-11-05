@@ -96,7 +96,7 @@ function chart(data, chartElement) {
                     dateIndex += 1;
                 } else if (calculateDays([today], 0) === canvas_index) {
                     // console.log("today!");
-                    ctx.fillStyle = THEME_02;
+                    ctx.fillStyle = BOX_COLOR;
                 } else if (calculateDays([today], 0) < canvas_index) {
                     ctx.fillStyle = BOX_NOT_VALID_YET;
                 } else {

@@ -11,7 +11,7 @@ export function load(callback) {
             .get({
                 spreadsheetId: config.spreadsheetId,
                 majorDimension: 'COLUMNS',
-                range: 'Sheet1!A:B'
+                range: 'Sheet1!A:C'
             })
             .then(
                 response => {

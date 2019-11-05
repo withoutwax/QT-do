@@ -11,7 +11,7 @@ class App extends React.Component {
     render() {
         return ( 
             <section className="App" >
-                <h1>Habit Tracker</h1>
+                <h1>지탁 순 QT 기록표</h1>
                 <Main />
                 <Footer />
             </section>
