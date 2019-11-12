@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/QT-do/static/css/main.3a6f724d.chunk.css",
+    "main.js": "/QT-do/static/js/main.cac185af.chunk.js",
+    "main.js.map": "/QT-do/static/js/main.cac185af.chunk.js.map",
+    "runtime~main.js": "/QT-do/static/js/runtime~main.c1433181.js",
+    "runtime~main.js.map": "/QT-do/static/js/runtime~main.c1433181.js.map",
+    "static/js/2.a68be548.chunk.js": "/QT-do/static/js/2.a68be548.chunk.js",
+    "static/js/2.a68be548.chunk.js.map": "/QT-do/static/js/2.a68be548.chunk.js.map",
+    "index.html": "/QT-do/index.html",
+    "precache-manifest.8ce1b98ab1542eb3e9b9bb252f8a33bc.js": "/QT-do/precache-manifest.8ce1b98ab1542eb3e9b9bb252f8a33bc.js",
+    "service-worker.js": "/QT-do/service-worker.js",
+    "static/css/main.3a6f724d.chunk.css.map": "/QT-do/static/css/main.3a6f724d.chunk.css.map"
+  }
+}
